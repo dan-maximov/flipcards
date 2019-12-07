@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Home from "pages/home";
 import Button from "components/Button";
 import { STATUSES } from "./constants";
@@ -14,6 +14,7 @@ const counter = counterCreator(0);
 const App = () => {
   const [status, setStatus] = useState(STATUSES.home);
   const [cards, setCards] = useState([]);
+  const firstInput = useRef();
 
   const addCard = (input1, input2, clearInputs) => e => {
     if (e) {
@@ -33,6 +34,21 @@ const App = () => {
       }
     ]);
     clearInputs();
+
+    console.log(firstInput.current);
+
+    if (firstInput.current) {
+      firstInput.current.focus();
+    }
+  };
+
+  const deleteCard = id => () => {
+    const newCards = [...cards];
+    const indexOfCard = newCards.findIndex(c => c.id === id);
+
+    newCards.splice(indexOfCard, 1);
+
+    setCards(newCards);
   };
 
   const startGame = () => {
@@ -42,7 +58,12 @@ const App = () => {
   if (status === STATUSES.home) {
     return (
       <>
-        <Home addCard={addCard} cards={cards} />
+        <Home
+          ref={firstInput}
+          deleteCard={deleteCard}
+          addCard={addCard}
+          cards={cards}
+        />
         <Button onClick={startGame} disabled={cards.length === 0}>
           Start the game
         </Button>

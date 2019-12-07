@@ -1,0 +1,27 @@
+.root {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
+  border: 0;
+  padding: 0;
+
+  background-color: #00909e;
+  padding: 3px 9px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.root:disabled {
+  background-color: gray;
+  cursor: default;
+}

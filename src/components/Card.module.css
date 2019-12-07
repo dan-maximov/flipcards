@@ -1,0 +1,22 @@
+.root {
+  position: relative;
+  text-align: center;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: #465881;
+}
+
+.delete {
+  content: 'x';
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  line-height: 15px;
+  background-color: red;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 40%;
+}

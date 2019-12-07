@@ -1,6 +1,8 @@
-body { 
-  background-color: rgba(57, 76, 107,255);
-  color: #fff
+body {
+  font-family: sans-serif;
+  background-color: #1b2a49;
+  color: #c9d1d3;
+  padding: 6px;
 }
 
 * {
