@@ -58,6 +58,8 @@ const App = () => {
     setCards(newCards);
   };
 
+  const removeCards = () => setCards([]);
+
   const startGame = () => {
     setStatus(STATUSES.game);
   };
@@ -71,6 +73,7 @@ const App = () => {
           addCard={addCard}
           reverseCards={reverseCards}
           cards={cards}
+          removeCards={removeCards}
         />
         <Button onClick={startGame} disabled={cards.length === 0}>
           Start the game
