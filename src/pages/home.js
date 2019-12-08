@@ -31,7 +31,11 @@ const Home = forwardRef(({ addCard, deleteCard, cards }, ref) => {
           value={input2}
           onChange={e => setInput2(e.target.value)}
         />
-        <Button className={styles.button} type="submit">
+        <Button
+          className={styles.button}
+          type="submit"
+          disabled={input1.length === 0 || input2.length === 0}
+        >
           Add card
         </Button>
       </form>
