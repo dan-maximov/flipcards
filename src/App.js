@@ -35,8 +35,6 @@ const App = () => {
     ]);
     clearInputs();
 
-    console.log(firstInput.current);
-
     if (firstInput.current) {
       firstInput.current.focus();
     }
