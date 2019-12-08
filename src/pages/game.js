@@ -19,6 +19,7 @@ const Game = ({ cards, setStatus }) => {
   };
 
   const flipTheCard = () => {
+    console.log("a");
     setFlipped(true);
 
     setTimeout(goNextCard, 2000);
@@ -26,7 +27,7 @@ const Game = ({ cards, setStatus }) => {
 
   return (
     <FlippableCard
-      onClick={flipped ? flipTheCard : undefined}
+      onClick={flipped ? undefined : flipTheCard}
       data={cards[position]}
       flipped={flipped}
     />
