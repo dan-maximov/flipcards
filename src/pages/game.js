@@ -26,7 +26,7 @@ const Game = ({ cards, setStatus }) => {
 
   return (
     <FlippableCard
-      onClick={!flipped && flipTheCard}
+      onClick={flipped ? flipTheCard : undefined}
       data={cards[position]}
       flipped={flipped}
     />
