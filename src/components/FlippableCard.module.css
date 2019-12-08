@@ -27,6 +27,9 @@
   height: 100%;
   backface-visibility: hidden;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   padding: 8px;
   border-radius: 4px;
