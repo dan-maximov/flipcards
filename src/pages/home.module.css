@@ -16,6 +16,14 @@
   margin-top: 3px;
 }
 
+.formButtons {
+  display: flex;
+}
+
+.reverseButton {
+  margin-left: 3px;
+}
+
 .button {
   margin-top: 8px;
 }

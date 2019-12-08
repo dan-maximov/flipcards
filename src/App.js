@@ -40,6 +40,15 @@ const App = () => {
     }
   };
 
+  const reverseCards = () =>
+    setCards(
+      cards.map(c => ({
+        ...c,
+        side1: c.side2,
+        side2: c.side1
+      }))
+    );
+
   const deleteCard = id => () => {
     const newCards = [...cards];
     const indexOfCard = newCards.findIndex(c => c.id === id);
@@ -60,6 +69,7 @@ const App = () => {
           ref={firstInput}
           deleteCard={deleteCard}
           addCard={addCard}
+          reverseCards={reverseCards}
           cards={cards}
         />
         <Button onClick={startGame} disabled={cards.length === 0}>
